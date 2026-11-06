@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Nova Obra</title>
+    <link rel="stylesheet" href="estilo2.css">
+</head>
+<body>
+
+    <div class="form-page-container">
+        
+        <header class="header">
+            <h1 class="titulo">Cadastrar Equipe</h1>
+            <a href="index.html" class="btn-voltar">← Voltar ao Catálogo</a>
+        </header>
+
+        <main class="content">
+            <form id="formEquipe" class="formulario-cadastro">
+    
+            <div class="input-grupo">
+                <label for="nomeEquipe">Nome da Equipe:</label>
+                <input type="text" id="nomeEquipe" required placeholder="Ex: Batfamília">
+            </div>
+
+            <div class="input-grupo">
+                <label for="baseOperacoes">Base de Operações:</label>
+                <input type="text" id="baseOperacoes" required placeholder="Ex: Batcaverna">
+            </div>
+
+            <div class="input-grupo">
+                <label for="anoCriacao">Ano de Criação:</label>
+                <input type="number" id="anoCriacao" required placeholder="Ex: 1940">
+            </div>
+
+            <button type="submit" class="btn-enviar">Cadastrar Equipe</button>
+            </form>
+
+        <footer class="footer">
+            <p>&copy; 2026 - Um Catálogo</p>
+        </footer>
+
+    </div>
+
+    <!-- O seu script que lida com o envio do formulário -->
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+/* --- RESET E CONFIGURAÇÕES GLOBAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0a0a0d; /* Fundo preto profundo da HQ */
+    color: #e6e6f0;            /* Texto branco gelo/metálico */
+    padding: 20px;
+}
+
+/* --- GRID PRINCIPAL (EXATAMENTE COMO O ESQUEMA) --- */
+.page-container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sub-navi content"
+        "facets context"
+        "footer footer";
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: auto 1fr auto auto;
+    gap: 15px;
+    max-width: 1300px;
+    margin: 0 auto;
+    min-height: 95vh;
+}
+
+/* --- HEADER --- */
+.header {
+    grid-area: header;
+    background-color: #121217;
+    border: 1px solid #1f1f26;
+    border-top: 4px solid #8b1e1e; /* Vermelho sangue da capa */
+    padding: 20px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .titulo {
+    font-size: 1.8rem;
+    color: #e6e6f0;
+    text-transform: uppercase;
+    font-weight: 800;
+    border-left: 5px solid #8b1e1e;
+    padding-left: 10px;
+}
+
+.btn-voltar {
+    background-color: #8b1e1e;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    transition: background-color 0.3s;
+}
+
+.btn-voltar:hover {
+    background-color: #b32424; /* Vermelho mais vibrante ao passar o mouse */
+}
+
+/* --- SUB NAVI (BANNER LATERAL) --- */
+.sub-navi {
+    grid-area: sub-navi;
+    background-color: #0a0a0d;
+    border: 1px solid #1f1f26;
+    border-radius: 6px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-carousel, .banner-slides {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.banner-slides img.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.banner-slides img.slide.active {
+    opacity: 1;
+}
+
+.banner-indicators {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.banner-indicators .indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(230, 230, 240, 0.3);
+    cursor: pointer;
+}
+
+.banner-indicators .indicator.active {
+    background-color: #8b1e1e;
+}
+
+/* --- CONTENT (CATÁLOGO) --- */
+.content {
+    grid-area: content;
+    background-color: #121217;
+    border: 1px solid #1f1f26;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+#colecao {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+/* Estilo dos cards gerados pelo JS */
+.card-produto {
+    background: #0a0a0d;
+    border: 1px solid #1f1f26;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.card-produto:hover {
+    transform: translateY(-3px);
+    border-color: #8b1e1e;
+}
+
+.card-produto img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card-produto .card-body {
+    padding: 12px;
+}
+
+.card-produto h3 {
+    font-size: 1.1rem;
+    color: #e6e6f0;
+    margin-bottom: 6px;
+}
+
+.card-produto p {
+    color: #a8a8b3;
+    font-size: 0.9rem;
+}
+
+/* --- CONTEXT --- */
+.context {
+    grid-area: context;
+    background-color: #121217;
+    border: 1px solid #1f1f26;
+    border-radius: 6px;
+    padding: 15px;
+    color: #a8a8b3;
+    font-size: 0.9rem;
+}
+
+/* --- FOOTER --- */
+.footer {
+    grid-area: footer;
+    background-color: #121217;
+    border: 1px solid #1f1f26;
+    border-radius: 6px;
+    padding: 15px;
+    text-align: center;
+    color: #a8a8b3;
+    font-size: 0.85rem;
+}
+
+/* --- RESPONSIVIDADE PARA MOBILE --- */
+@media (max-width: 768px) {
+    .page-container {
+        grid-template-areas:
+            "header"
+            "sub-navi"
+            "facets"
+            "content"
+            "context"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column; /* Organiza os itens em coluna: texto em cima, imagem embaixo */
+    align-items: center;    /* Centraliza os elementos no card */
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    color: #fff;
+    width: 280px;           /* Opcional: define uma largura fixa ou máxima para o card */
+}
+
+/* Área do texto ocupando toda a largura superior */
+.card .texto {
+    width: 100%;
+    margin-bottom: 15px;     /* Cria um espaço entre o texto e a imagem */
+    text-align: left;        /* Alinha o texto à esquerda (ou 'center' se preferir) */
+}
+
+/* Área da imagem embaixo */
+.card .img {
+    width: 100%;
+    height: 200px;           /* Ajuste a altura que preferir para a imagem */
+}
+
+.card .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       /* Faz a imagem preencher o espaço sem distorcer */
+    border-radius: 6px;
+}

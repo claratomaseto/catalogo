@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Nova Obra</title>
+    <link rel="stylesheet" href="estilo2.css">
+</head>
+<body>
+
+    <div class="form-page-container">
+        
+        <header class="header">
+            <h1 class="titulo">Cadastrar Personagem</h1>
+            <a href="index.html" class="btn-voltar">← Voltar ao Catálogo</a>
+        </header>
+
+        <main class="content">
+            <form id="meuFormulario" class="formulario-cadastro">
+    
+                <div class="input-grupo">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" required placeholder="Ex: Jason Todd">
+            </div>
+
+            <div class="input-grupo">
+                <label for="codinome">Codinome:</label>
+                <input type="text" id="codinome" required placeholder="Ex: Capuz Vermelho">
+            </div>
+
+            <div class="input-grupo">
+                <label for="tipo">Tipo:</label>
+                <input type="text" id="tipo" required placeholder="Ex: Anti-herói">
+            </div>
+
+            <div class="input-grupo">
+                <label for="status">Status:</label>
+                <input type="text" id="status" required placeholder="Ex: Ativo">
+            </div>
+
+            <div class="input-grupo">
+                <label for="localizacao">Localização:</label>
+                <input type="text" id="localizacao" required placeholder="Ex: Gotham City">
+            </div>
+            
+            <div class="input-grupo">
+                <label for="imagem">URL da Imagem:</label>
+                <input type="url" id="imagem" required placeholder="https://exemplo.com/imagem.jpg">
+            </div>
+
+            <button type="submit" class="btn-enviar">Cadastrar Personagem</button>
+        </form>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 - Um Catálogo</p>
+        </footer>
+
+    </div>
+
+    <!-- O seu script que lida com o envio do formulário -->
+    <script src="index.js"></script>
+</body>
+</html>

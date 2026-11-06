@@ -1,0 +1,158 @@
+/* ============================================================
+   ESTILO DO FORMULÁRIO DE CADASTRO (TEMA HQ RED HOOD)
+   ============================================================ */
+
+body {
+    background-color: #0a0a0d;
+    color: #e6e6f0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-page-container {
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* CORRIGIDO: de 300px para 20px */
+    padding: 0 20px;
+}
+
+/* --- HEADER DO FORMULÁRIO (Igual ao catálogo) --- */
+.header {
+    background-color: #121217;
+    border: 1px solid #1f1f26;
+    border-top: 4px solid #8b1e1e;
+    padding: 20px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .titulo {
+    font-size: 1.5rem;
+    color: #e6e6f0;
+    text-transform: uppercase;
+    font-weight: 800;
+    border-left: 5px solid #8b1e1e;
+    padding-left: 10px;
+}
+
+.btn-voltar {
+    background-color: #8b1e1e;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    transition: background-color 0.3s;
+}
+
+.btn-voltar:hover {
+    background-color: #b32424;
+}
+
+/* --- CONTAINER DO FORMULÁRIO (PAINEL) --- */
+.formulario-cadastro {
+    background-color: #121217;
+    border: 1px solid #1f1f26;
+    border-top: 3px solid #8b1e1e;
+    border-radius: 6px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* Grupos de inputs */
+.input-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-grupo label {
+    font-size: 0.85rem;
+    color: #a8a8b3;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Campos de entrada estilizados */
+.input-grupo input,
+.input-grupo textarea {
+    background-color: #07070a;
+    border: 1px solid #23232d;
+    border-radius: 4px;
+    padding: 14px;
+    color: #e6e6f0;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-grupo input::placeholder,
+.input-grupo textarea::placeholder {
+    color: #4a4a58;
+}
+
+.input-grupo input:focus,
+.input-grupo textarea:focus {
+    border-color: #8b1e1e;
+    background-color: #0c0c10;
+    box-shadow: 0 0 0 2px rgba(139, 30, 30, 0.2);
+}
+
+.input-grupo textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.4;
+}
+
+/* Botão de envio imponente */
+.btn-enviar {
+    background: linear-gradient(135deg, #8b1e1e, #681414);
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 14px;
+    font-size: 0.95rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 5px;
+    box-shadow: 0 4px 12px rgba(139, 30, 30, 0.3);
+}
+
+.btn-enviar:hover {
+    background: linear-gradient(135deg, #a32222, #8b1e1e);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(139, 30, 30, 0.5);
+}
+
+.btn-enviar:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(139, 30, 30, 0.3);                 
+}
+
+/* --- FOOTER --- */
+.footer {
+    background-color: #121217;
+    border: 1px solid #1f1f26;
+    border-radius: 6px;
+    padding: 15px;
+    text-align: center;
+    color: #a8a8b3;
+    font-size: 0.85rem;
+}
